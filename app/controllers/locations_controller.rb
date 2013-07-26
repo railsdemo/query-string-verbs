@@ -33,7 +33,7 @@ class LocationsController < ApplicationController
 
     if params[:v] == "edit" # GET
 
-      @path = '/notes/'+params[:id]+'?v=update'
+      @path = '/location/'+params[:id]+'?v=update'
 
     elsif params[:v] == "update" # PATCH/PUT
 
