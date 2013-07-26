@@ -1,4 +1,6 @@
 QueryStringVerbs::Application.routes.draw do
+  get "users/list"
+  get "users/view"
   resources :locations
 
   # The priority is based upon order of creation: first created -> highest priority.
