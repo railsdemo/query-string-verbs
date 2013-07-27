@@ -1,6 +1,6 @@
 ## URL Verbs in Query Strings
 
-[Heroku Demo Link](hhttp://query-string-verbs.herokuapp.com/)
+[Heroku Demo Link](http://query-string-verbs.herokuapp.com/)
 
 *"but I prefer the “?m=share” formulation for two reasons: first, it works even when your nouns already have subpages, and second, it makes it clear that the page is meant to do something, not just convey more information"* - Aaron Swartz
 
