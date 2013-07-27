@@ -20,6 +20,7 @@ Rake Routes
 
 ```
        Prefix Verb   URI Pattern                          Controller#Action
+         root GET    /                                    pages#home
     locations GET    /locations(.:format)                 locations#index
      location GET    /locations/:id(.:format)             locations#show
  new_location GET    /locations?v=new(.:format)           locations#index

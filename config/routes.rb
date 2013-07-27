@@ -1,5 +1,6 @@
 QueryStringVerbs::Application.routes.draw do
   
+  root to: "pages#home"
   # Locations - modifying scaffolding
   resources :locations, only: [:index, :show]
   
