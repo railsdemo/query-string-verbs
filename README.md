@@ -12,4 +12,22 @@ A demo of URLs that use the following conventions, as propsed by Aaron Swartz in
 This is a bit strange and I will present two demos objects:
 
 -Locations (Scaffolded)
--Notes (Created from Scratch)
+-Users (Created from Scratch)
+
+This feels like a hack that destroys rails conventions, so I don't recommend it.  Although I share Aaron's belief that URLs should be nouns and verbs appended in query strings, I will likely stick to rails conventions.  This was meant as a demo to prove it could be done.
+
+Rake Routes
+
+```ruby
+       Prefix Verb   URI Pattern                          Controller#Action
+   users_list GET    /users/list(.:format)                users#list
+   users_view GET    /users/view(.:format)                users#view
+    locations GET    /locations(.:format)                 locations#index
+     location GET    /locations/:id(.:format)             locations#show
+ new_location GET    /locations?v=new(.:format)           locations#index
+              POST   /locations(?v=create)(.:format)      locations#index
+edit_location GET    /locations/:id?v=edit(.:format)      locations#show
+              PUT    /locations/:id(?v=update)(.:format)  locations#show
+              PATCH  /locations/:id(?v=update)(.:format)  locations#show
+              DELETE /locations/:id(?v=destroy)(.:format) locations#show
+```

@@ -33,9 +33,9 @@ class LocationsController < ApplicationController
 
     if params[:v] == "edit" # GET
 
-      @path = '/location/'+params[:id]+'?v=update'
+      @path = '/locations/'+params[:id]+'?v=update'
 
-    elsif params[:v] == "update" # PATCH/PUT
+    elsif params[:v] == "update" and (params[:_method] == "patch" or params[:_method] == "put") # PATCH/PUT
 
       respond_to do |format|
         if @location.update(location_params)
@@ -47,13 +47,16 @@ class LocationsController < ApplicationController
         end
       end
 
-    elsif params[:v] == "destroy" # DELETE
+    elsif params[:v] == "destroy" and params[:_method] == "delete" # DELETE
 
       @location.destroy
       respond_to do |format|
         format.html { redirect_to locations_url }
         format.json { head :no_content }
       end
+
+    #else # GET
+      # Additional code for the scaffolded show action would go here
 
     end
   end
