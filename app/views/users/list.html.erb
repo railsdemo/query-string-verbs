@@ -1,2 +1,10 @@
-<h1>Users#list</h1>
-<p>Find me in app/views/users/list.html.erb</p>
+<h1>Listing users</h1>
+
+<% if params[:v] == 'new' %>
+  <%= render 'new' %>
+<% else %>
+  <%= render 'table' %>
+  <%= link_to 'New User', new_user_path %>
+<% end %>
+
+<br>
